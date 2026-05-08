@@ -86,84 +86,8 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
                 </div>
             </div>
             </div>
-
-            {/* MBBS Colleges Grid */}
-            <div className="mb-16">
-            <h3 className="text-2xl font-playfair text-white mb-8 border-b border-brand-gold/30 pb-4">Top MBBS Abroad Colleges</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-12">
-                {FOOTER_COLLEGES.mbbs.map((section, idx) => (
-                    <div key={idx}>
-                    <h5 className="text-xs font-black uppercase text-brand-gold tracking-[0.2em] mb-4">{section.country}</h5>
-                    <ul className="space-y-2.5">
-                        {section.names.map((name, i) => (
-                        <li key={i}>
-                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-white/60 hover:text-brand-gold transition-colors leading-tight block">
-                            {name}
-                            </Link>
-                        </li>
-                        ))}
-                    </ul>
-                    </div>
-                ))}
-            </div>
-            </div>
-
-            {/* Study Abroad Colleges Grid */}
-            <div>
-            <h3 className="text-2xl font-playfair text-white mb-8 border-b border-brand-gold/30 pb-4">Top Study Abroad Colleges</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-12">
-                {FOOTER_COLLEGES.study.map((section, idx) => (
-                    <div key={idx}>
-                    <h5 className="text-xs font-black uppercase text-brand-gold tracking-[0.2em] mb-4">{section.country}</h5>
-                    <ul className="space-y-2.5">
-                        {section.names.map((name, i) => (
-                        <li key={i}>
-                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-white/60 hover:text-brand-gold transition-colors leading-tight block">
-                            {name}
-                            </Link>
-                        </li>
-                        ))}
-                    </ul>
-                    </div>
-                ))}
-            </div>
-            </div>
         </div>
       </div>
-
-      {/* PART 2: Global Presence (Dark Blue Background) */}
-      <section className="bg-brand-blue/80 text-white py-20 relative overflow-hidden border-t-2 border-brand-gold/20">
-          {/* Background Map/Icon decor */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-             <div className="flex justify-between items-center mb-16 border-b border-brand-gold/30 pb-6">
-                <h2 className="text-3xl font-playfair tracking-tight">Our Global Presence</h2>
-                <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold"><i className="fa-solid fa-location-dot"></i></div>
-             </div>
-
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-                {OFFICE_ADDRESSES.map((off, i) => (
-                  <div key={i}>
-                     <h4 className="text-brand-gold font-black text-lg mb-4">{off.city} Office</h4>
-                     <div className="flex items-start mb-6">
-                        <i className="fa-solid fa-location-dot mt-1.5 mr-3 text-brand-gold text-xs"></i>
-                        <p className="text-sm font-medium text-white/80 leading-relaxed min-h-[40px]">{off.address}</p>
-                     </div>
-                     <div className="flex space-x-3">
-                        <Link to={`/office/${off.slug}`} className="px-4 py-2 bg-white/5 border border-brand-gold/30 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Details</Link>
-                        <a href={`tel:${off.phone}`} className="px-4 py-2 bg-white/5 border border-brand-gold/30 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Call</a>
-                     </div>
-                  </div>
-                ))}
-
-                {/* Central Helpline Card */}
-                <div className="lg:col-span-1 bg-brand-gold/5 backdrop-blur-sm p-8 rounded-3xl border border-brand-gold/20 flex flex-col justify-center">
-                   <h4 className="text-brand-gold font-black text-[10px] uppercase tracking-[0.2em] mb-2">Central Helpline</h4>
-                   <p className="text-3xl font-black text-white mb-2">{helpline || '+91-9311338511'}</p>
-                   <p className="text-sm text-white/60">{email || 'info@privieducation.in'}</p>
-                </div>
-             </div>
-          </div>
-       </section>
 
       {/* Copyright */}
        <div className="bg-black/20 py-8 text-center border-t border-brand-gold/20">

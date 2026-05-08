@@ -2,19 +2,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { POPULAR_COLLEGES, COUNTRY_ICONS } from '../data.ts';
 import * as Flags from 'country-flag-icons/react/3x2';
-import { 
-  db, 
-  collection, 
-  getDocs, 
-  query 
-} from '../firebase.ts';
 
 const PopularColleges: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'MBBS Abroad' | 'Study Abroad'>('MBBS Abroad');
   const [selectedCountry, setSelectedCountry] = useState('Russia');
-  const [colleges, setColleges] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // We are asked to show ONLY dummy MBBS abroad colleges
+  const colleges = POPULAR_COLLEGES.filter(c => c.category === 'MBBS Abroad');
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -31,101 +25,31 @@ const PopularColleges: React.FC = () => {
       }, 3000);
     }
     return () => clearInterval(interval);
-  }, [activeTab, colleges.length]);
-
-  useEffect(() => {
-    const fetchColleges = async () => {
-      setLoading(true);
-      try {
-        const q = query(collection(db, 'colleges'));
-        const querySnapshot = await getDocs(q);
-        const fetched = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() as any }));
-        
-        if (fetched.length > 0) {
-          setColleges(fetched);
-        } else {
-          try {
-            const saved = JSON.parse(localStorage.getItem('iexplain_colleges') || '[]');
-            setColleges(saved.length > 0 ? saved : POPULAR_COLLEGES);
-          } catch (e) {
-            setColleges(POPULAR_COLLEGES);
-          }
-        }
-      } catch (error) {
-        console.error("Colleges fetch error:", error);
-        try {
-          const saved = JSON.parse(localStorage.getItem('iexplain_colleges') || '[]');
-          setColleges(saved.length > 0 ? saved : POPULAR_COLLEGES);
-        } catch (e) {
-          setColleges(POPULAR_COLLEGES);
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchColleges();
   }, []);
 
-  // When tab changes, auto-select the first country that has colleges for that tab
-  useEffect(() => {
-    if (colleges.length === 0) return;
-
-    const countriesForTab = Object.keys(COUNTRY_ICONS).filter(countryName =>
-      colleges.some(c => c.category === activeTab && c.country === countryName)
-    );
-
-    if (countriesForTab.length > 0 && !countriesForTab.includes(selectedCountry)) {
-      setSelectedCountry(countriesForTab[0]);
-    }
-  }, [activeTab, colleges]);
-
-  // Only show countries that have at least one college for the active tab
   const availableCountries = Object.entries(COUNTRY_ICONS).filter(([countryName]) =>
-    colleges.some(c => c.category === activeTab && c.country === countryName)
+    colleges.some(c => c.country === countryName)
   );
 
-  const filteredColleges = colleges.filter(c =>
-    c.category === activeTab && c.country === selectedCountry
-  );
-
+  const filteredColleges = colleges.filter(c => c.country === selectedCountry);
   const hasContent = availableCountries.length > 0;
 
   return (
     <section className="py-12 bg-white dark:bg-slate-900 overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Heading + Tabs — always visible */}
+        {/* Heading */}
         <div className="text-center mb-12">
           <span className="text-brand-gold font-bold uppercase tracking-[0.12em] text-[11px] block mb-2">Universities</span>
           <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-6 tracking-tight">
             Our <span className="text-brand-gold italic">Partners</span>
           </h2>
           <div className="w-16 h-1 bg-brand-gold mb-8 mx-auto rounded-full"></div>
-
-          <div className="flex justify-center space-x-12 border-b border-gray-100 dark:border-slate-800 pb-4">
-            {(['MBBS Abroad', 'Study Abroad'] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`text-lg font-playfair font-bold pb-4 relative transition-colors ${
-                  activeTab === tab
-                    ? 'text-brand-gold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-gold'
-                    : 'text-gray-400 hover:text-brand-blue dark:hover:text-white'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {loading ? (
-          <div className="flex justify-center py-20">
-            <i className="fa-solid fa-spinner fa-spin text-4xl text-brand-gold"></i>
-          </div>
-        ) : hasContent ? (
+        {hasContent && (
           <>
-            {/* Country Selector — only shows countries that have data for the active tab */}
+            {/* Country Selector */}
             <div className="relative mb-12">
               <div ref={scrollRef} className="flex items-center justify-start md:justify-center space-x-8 overflow-x-auto no-scrollbar pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {availableCountries.map(([countryName, flagCode]) => {
@@ -189,7 +113,7 @@ const PopularColleges: React.FC = () => {
               </div>
             )}
           </>
-        ) : null}
+        )}
 
       </div>
     </section>
