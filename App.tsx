@@ -11,7 +11,6 @@ import BlogSection from './components/BlogSection.tsx';
 import BlogDetailPage from './components/BlogDetailPage.tsx';
 import ContactForm from './components/ContactForm.tsx';
 import PopularColleges from './components/PopularColleges.tsx';
-import KnowYourDestination from './components/KnowYourDestination.tsx';
 import Footer from './components/Footer.tsx';
 import AdminPanel from './components/AdminPanel.tsx';
 import GoogleReviewsWidget from './components/GoogleReviewsWidget.tsx';
@@ -25,9 +24,7 @@ import StudyIndiaDetailPage from './components/StudyIndiaDetailPage.tsx';
 import StudyAbroadDetailPage from './components/StudyAbroadDetailPage.tsx';
 import MBBSDetailPage from './components/MBBSDetailPage.tsx';
 import WhoWeAre from './components/WhoWeAre.tsx';
-import AirportDiaries from './components/AirportDiaries.tsx';
 import StudentReviews from './components/StudentReviews.tsx';
-import AwardsAchievements from './components/AwardsAchievements.tsx';
 import * as Flags from 'country-flag-icons/react/3x2';
 import { 
   STUDENT_SERVICES_DATA,
@@ -165,7 +162,7 @@ const ServicesPage = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-3 text-center md:text-left">{service.title}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed mb-6 flex-grow text-justify md:text-left">
-                {service.fullDesc || service.desc}
+                {(service as any).fullDesc || service.desc}
               </p>
               <div className="flex items-center text-brand-gold font-black text-[10px] uppercase tracking-widest group-hover:translate-x-2 transition-transform">
                 Read More <i className="fa-solid fa-arrow-right ml-2"></i>
@@ -181,7 +178,7 @@ const ServicesPage = () => {
 // --- SERVICE DETAIL PAGE ---
 const ServiceDetailPage = () => {
   const { id } = useParams<{ id: string }>();
-  const service = STUDENT_SERVICES_DATA.find(s => s.id === id);
+  const service = STUDENT_SERVICES_DATA.find(s => s.id === id) as any;
 
   if (!service) return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center bg-white dark:bg-slate-900">
@@ -520,17 +517,13 @@ const App: React.FC = () => {
           <Route path="/" element={
             <>
               <Hero onBookSession={() => setIsContactModalOpen(true)} />
-              <StatsSection />
               <WhoWeAre />
+              <StatsSection />
               <IndiaSection />
               <PopularColleges />
-              <Roadmap onBookSession={() => setIsContactModalOpen(true)} />
-              <AirportDiaries />
-              <KnowYourDestination />
-              <StudentReviews />
-              <AwardsAchievements />
               <ExpertCounselorsCTA />
-              <BlogSection />
+              <StudentReviews />
+              <Roadmap onBookSession={() => setIsContactModalOpen(true)} />
               <ContactMapSection />
             </>
           } />

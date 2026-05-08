@@ -8,7 +8,7 @@ const IndiaSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-brand-gold font-bold uppercase tracking-[0.12em] text-[11px] block mb-2">Domestic Programs</span>
-          <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-4 tracking-tight">Study in <span className="text-brand-gold italic">India</span></h2>
+          <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-4 tracking-tight">MBBS in <span className="text-brand-gold italic">India</span></h2>
           <p className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
             Get comprehensive information about Medical, Management, and Engineering courses in India's top colleges.
           </p>
