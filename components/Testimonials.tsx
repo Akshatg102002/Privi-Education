@@ -7,21 +7,22 @@ const Testimonials: React.FC = () => {
     <section className="py-12 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-brand-blue dark:text-white mb-4">Student Stories</h2>
-          <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto">Real experiences from students who transformed their careers with iExplain.</p>
+          <span className="text-brand-gold font-bold uppercase tracking-[0.12em] text-[11px] block mb-2">Testimonials</span>
+          <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-4 tracking-tight">Student <span className="text-brand-gold italic">Stories</span></h2>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto">Real experiences from students who transformed their careers with Privi.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, idx) => (
-            <div key={idx} className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-slate-700 transition-all hover:shadow-xl hover:-translate-y-1">
+            <div key={idx} className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-brand-blue/10 hover:border-brand-gold dark:border-slate-700 transition-all hover:shadow-lg hover:-translate-y-1 group">
               <div className="flex items-center space-x-4 mb-6">
-                <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-2xl bg-slate-100 border-2 border-slate-50" />
+                <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full bg-slate-100 border border-brand-gold/20" />
                 <div>
-                  <h4 className="font-bold text-brand-blue dark:text-white text-lg">{t.name}</h4>
-                  <p className="text-brand-gold font-bold text-xs uppercase tracking-widest">{t.univ}</p>
+                  <h4 className="font-playfair font-bold text-brand-blue dark:text-white text-lg">{t.name}</h4>
+                  <p className="text-brand-gold font-bold text-[10px] uppercase tracking-widest">{t.univ}</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed italic">
+              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic relative">
                 "{t.text}"
               </p>
               <div className="mt-6 flex text-brand-gold">

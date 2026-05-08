@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { HashRouter } from 'react-router-dom';
 
-console.log("iExplain App: Initializing React root...");
+console.log("Privi App: Initializing React root...");
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

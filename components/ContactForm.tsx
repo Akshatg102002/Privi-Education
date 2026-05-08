@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl md:text-3xl font-black text-brand-blue dark:text-white mb-2 leading-tight">
+            <h3 className="text-2xl md:text-3xl font-playfair font-bold text-brand-blue dark:text-white mb-2 leading-tight">
               Take the 1st step towards your study abroad journey
             </h3>
           </div>
@@ -195,7 +195,7 @@ const ContactForm: React.FC = () => {
             <button 
               type="submit" 
               disabled={loading}
-              className="w-full py-4 bg-[#104264] text-white rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg flex items-center justify-center disabled:bg-gray-400"
+              className="w-full py-4 bg-brand-blue text-white rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-brand-blue/90 hover:shadow-lg transition-all flex items-center justify-center disabled:bg-gray-400"
             >
               {loading ? <i className="fa-solid fa-spinner fa-spin mr-2"></i> : null}
               {loading ? 'Processing...' : 'Submit'}

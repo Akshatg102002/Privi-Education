@@ -10,14 +10,14 @@ const WhoWeAre: React.FC = () => {
           {/* Text Content */}
           <div className="lg:w-1/2 order-2 lg:order-1">
             <div className="mb-4 text-center lg:text-left">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-brand-gold/10 text-brand-gold text-[10px] font-black uppercase tracking-[0.2em] mb-4">
+              <span className="inline-block px-4 py-1.5 bg-brand-gold/10 text-brand-gold text-[11px] font-bold uppercase tracking-[0.12em] mb-4">
                 About Us
               </span>
-              <h2 className="text-3xl lg:text-5xl font-black text-brand-blue dark:text-white mb-4 tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-4 tracking-tight">
                 {WHO_WE_ARE_CONTENT.title}
               </h2>
             </div>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed font-medium text-justify lg:text-left">
+            <div className="space-y-4 text-gray-500 dark:text-gray-300 text-sm leading-relaxed text-justify lg:text-left">
               {WHO_WE_ARE_CONTENT.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -31,16 +31,15 @@ const WhoWeAre: React.FC = () => {
 
           {/* Image */}
           <div className="lg:w-1/2 order-1 lg:order-2">
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+            <div className="relative rounded-xl overflow-hidden shadow-sm border border-brand-blue/10 dark:border-slate-800">
               <img 
-                src="https://socialfoundationindia.org/wp-content/uploads/2026/03/Abroad.jpeg" 
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800" 
                 alt="Who We Are" 
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/60 to-transparent"></div>
-              <div className="absolute bottom-8 left-8 right-8 text-white">
-                <p className="text-2xl font-black mb-2">Building Global Careers</p>
-                <p className="text-sm font-medium opacity-90">Trusted by thousands of students worldwide.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 to-transparent flex flex-col justify-end p-8">
+                <p className="text-2xl font-playfair font-bold text-white mb-2 italic">Building Global Careers</p>
+                <p className="text-xs text-white/80 font-medium">Trusted by thousands of students worldwide.</p>
               </div>
             </div>
           </div>

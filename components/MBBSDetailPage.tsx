@@ -31,7 +31,7 @@ const MBBSDetailPage: React.FC<MBBSDetailPageProps> = ({ data }) => {
         </div>
 
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 animate-fade-in">
-          <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight drop-shadow-lg">
+          <h1 className="text-5xl lg:text-7xl font-playfair font-bold italic text-white leading-tight drop-shadow-lg">
             {data.title}
           </h1>
         </div>
@@ -63,8 +63,8 @@ const MBBSDetailPage: React.FC<MBBSDetailPageProps> = ({ data }) => {
         
         {/* 2. Quick Facts & 3. Quick Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-slate-700">
-            <h2 className="text-2xl font-black text-brand-blue dark:text-white mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">Quick Facts About {data.quickFacts.country}</h2>
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm border border-brand-blue/10 dark:border-slate-700">
+            <h2 className="text-2xl font-playfair font-bold text-brand-blue dark:text-white mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">Quick Facts About {data.quickFacts.country}</h2>
             <div className="space-y-4">
               {Object.entries(data.quickFacts).map(([key, value]) => (
                 <div key={key} className="flex justify-between items-center py-2 border-b border-gray-50 dark:border-slate-700/50 last:border-0">
@@ -75,9 +75,9 @@ const MBBSDetailPage: React.FC<MBBSDetailPageProps> = ({ data }) => {
             </div>
           </div>
 
-          <div className="bg-brand-blue rounded-3xl p-8 shadow-lg text-white relative overflow-hidden">
+          <div className="bg-brand-blue rounded-xl p-8 shadow-sm text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-            <h2 className="text-2xl font-black mb-6 border-b border-white/10 pb-4 relative z-10">Quick Overview of MBBS in {data.quickFacts.country}</h2>
+            <h2 className="text-2xl font-playfair font-bold italic mb-6 border-b border-white/10 pb-4 relative z-10">Quick Overview of MBBS in {data.quickFacts.country}</h2>
             <div className="space-y-4 relative z-10">
               {Object.entries(data.quickOverview).map(([key, value]) => (
                 <div key={key} className="flex justify-between items-center py-2 border-b border-white/10 last:border-0">
@@ -211,7 +211,7 @@ const MBBSDetailPage: React.FC<MBBSDetailPageProps> = ({ data }) => {
         {/* 11. Why Choose Us & 12. Checklist */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-brand-blue text-white rounded-3xl p-8 shadow-lg">
-            <h3 className="text-2xl font-black mb-6">Why Choose iExplain Education</h3>
+            <h3 className="text-2xl font-black mb-6">Why Choose Privi Education</h3>
             <ul className="space-y-4">
               {data.whyChooseUs.map((reason, idx) => (
                 <li key={idx} className="flex items-center gap-3">

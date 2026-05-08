@@ -13,7 +13,7 @@ interface AICounselorProps {
 
 const AICounselor: React.FC<AICounselorProps> = ({ onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Welcome to iExplain AI! How can I help you today? I can provide info on MBBS in Russia, Georgia, and more.' }
+    { role: 'assistant', content: 'Welcome to Privi AI! How can I help you today? I can provide info on MBBS in Russia, Georgia, and more.' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -42,7 +42,7 @@ const AICounselor: React.FC<AICounselorProps> = ({ onClose }) => {
         model: 'gemini-3-flash-preview',
         contents: userMessage,
         config: {
-          systemInstruction: 'You are an expert Study Abroad Counselor for iExplain Education. You help students with MBBS in Russia, Georgia, Kazakhstan and other countries. You also help with Engineering and Management courses. Be professional, supportive, and informative. If they ask about fees, mention that iExplain provides transparent pricing. Always encourage them to book a free consultation with our humans if the query is complex.'
+          systemInstruction: 'You are an expert Study Abroad Counselor for Privi Education. You help students with MBBS in Russia, Georgia, Kazakhstan and other countries. You also help with Engineering and Management courses. Be professional, supportive, and informative. If they ask about fees, mention that Privi provides transparent pricing. Always encourage them to book a free consultation with our humans if the query is complex.'
         }
       });
 
@@ -121,7 +121,7 @@ const AICounselor: React.FC<AICounselorProps> = ({ onClose }) => {
             </button>
           </div>
           <div className="flex items-center justify-center mt-4 space-x-2">
-            <span className="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-widest">Powered by iExplain AI</span>
+            <span className="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-widest">Powered by Privi AI</span>
           </div>
         </div>
       </div>

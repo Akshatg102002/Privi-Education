@@ -41,10 +41,10 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/70 to-brand-blue/30"></div>
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 mt-16 animate-fade-in">
-          <span className="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-gold text-[10px] font-black uppercase tracking-[0.25em] mb-6 shadow-xl">
+          <span className="inline-block px-5 py-2 bg-brand-gold/20 text-brand-gold text-[11px] font-bold uppercase tracking-[0.12em] mb-6 shadow-sm">
             {data.type} University
           </span>
-          <h1 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-sm">{data.name}</h1>
+          <h1 className="text-4xl lg:text-6xl font-playfair font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-sm">{data.name}</h1>
           <p className="text-xl text-white/90 font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-sm flex items-center justify-center">
             <i className="fa-solid fa-location-dot mr-2 text-brand-gold"></i> {data.location}
           </p>
@@ -57,7 +57,7 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
           <div className="lg:col-span-8 space-y-8">
             
             {/* Quick Stats Bar */}
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-xl border border-gray-100 dark:border-slate-700 flex flex-wrap gap-8 items-center justify-between backdrop-blur-xl">
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-brand-blue/10 dark:border-slate-700 flex flex-wrap gap-8 items-center justify-between backdrop-blur-xl">
                <div className="flex items-center gap-4">
                  <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-500 flex items-center justify-center text-xl"><i className="fa-regular fa-building"></i></div>
                  <div>
@@ -99,11 +99,11 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
 
             {/* Fee Structure */}
             {data.fees && (
-              <div className="bg-[#022c4a] text-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+              <div className="bg-[#022c4a] text-white p-10 rounded-xl shadow-lg relative overflow-hidden group">
                 <div className="absolute -top-20 -right-20 w-80 h-80 bg-brand-gold/20 rounded-full blur-[100px] group-hover:bg-brand-gold/30 transition-all duration-700"></div>
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
                 
-                <h3 className="text-2xl font-black mb-8 flex items-center relative z-10">
+                <h3 className="text-2xl font-playfair font-bold mb-8 flex items-center relative z-10">
                   <span className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mr-4 text-lg text-brand-gold"><i className="fa-solid fa-coins"></i></span>
                   Fee Structure
                 </h3>
@@ -124,8 +124,8 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
 
             {/* Eligibility & Documents */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-slate-700 h-full">
-                <h3 className="text-xl font-black text-brand-blue dark:text-white mb-6 flex items-center">
+              <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700 h-full">
+                <h3 className="text-xl font-playfair font-bold text-brand-blue dark:text-white mb-6 flex items-center">
                   <i className="fa-solid fa-check-double text-green-500 mr-3"></i> Eligibility
                 </h3>
                 <ul className="space-y-4">
@@ -138,8 +138,8 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
                 </ul>
               </div>
 
-              <div className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-slate-700 h-full">
-                <h3 className="text-xl font-black text-brand-blue dark:text-white mb-6 flex items-center">
+              <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700 h-full">
+                <h3 className="text-xl font-playfair font-bold text-brand-blue dark:text-white mb-6 flex items-center">
                   <i className="fa-solid fa-file-lines text-blue-500 mr-3"></i> Documents
                 </h3>
                 <ul className="space-y-4">
@@ -154,8 +154,8 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
             </div>
 
             {/* Admission Process */}
-             <div className="bg-white dark:bg-slate-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-slate-700">
-               <h3 className="text-2xl font-black text-brand-blue dark:text-white mb-8 flex items-center">
+             <div className="bg-white dark:bg-slate-800 p-10 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700">
+               <h3 className="text-2xl font-playfair font-bold text-brand-blue dark:text-white mb-8 flex items-center">
                  <span className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-900/30 text-orange-500 flex items-center justify-center mr-4 text-lg"><i className="fa-solid fa-road"></i></span>
                  Admission Process
                </h3>
@@ -172,8 +172,8 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
             </div>
 
             {/* Student Life & Placements */}
-            <div className="bg-white dark:bg-slate-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-slate-700">
-               <h3 className="text-2xl font-black text-brand-blue dark:text-white mb-6 flex items-center">
+            <div className="bg-white dark:bg-slate-800 p-10 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700">
+               <h3 className="text-2xl font-playfair font-bold text-brand-blue dark:text-white mb-6 flex items-center">
                  <span className="w-10 h-10 rounded-xl bg-pink-50 dark:bg-pink-900/30 text-pink-500 flex items-center justify-center mr-4 text-lg"><i className="fa-solid fa-graduation-cap"></i></span>
                  Student Life & Career
                </h3>
@@ -203,8 +203,8 @@ const CollegeDetailPage: React.FC<CollegeDetailPageProps> = ({ data }) => {
 
             {/* Campus Gallery */}
             {data.gallery && data.gallery.length > 0 && (
-              <div className="bg-white dark:bg-slate-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-slate-700">
-                <h3 className="text-2xl font-black text-brand-blue dark:text-white mb-8 flex items-center">
+              <div className="bg-white dark:bg-slate-800 p-10 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700">
+                <h3 className="text-2xl font-playfair font-bold text-brand-blue dark:text-white mb-8 flex items-center">
                   <span className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 text-indigo-500 flex items-center justify-center mr-4 text-lg"><i className="fa-solid fa-images"></i></span>
                   Campus Gallery
                 </h3>

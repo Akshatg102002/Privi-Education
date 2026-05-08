@@ -2,18 +2,18 @@ import { Destination, Office, Blog, Testimonial, College, CollegeDetailData, Pro
 export { MBBS_ABROAD_DETAILED } from './mbbs_data.ts';
 export { STUDY_ABROAD_DETAILED } from './studyAbroad_Data.ts';
 
-export const LOGO_URL = "https://www.iexplaineducation.com/wp-content/uploads/2023/04/Logo-2-scaled-e1684926432756-768x307.jpg";
+export const LOGO_URL = "https://res.cloudinary.com/dusvykklu/image/upload/v1778240300/Privi_xlatzs.jpg";
 export const HERO_IMG_URL = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1200";
 
 export const PRIVACY_POLICY_CONTENT = `
 <h3>1. Introduction</h3>
-<p>Welcome to iExplain Education. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal information when you visit our website or use our services.</p>
+<p>Welcome to Privi Education. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal information when you visit our website or use our services.</p>
 <p>We collect basic information such as name, email, and phone number when you fill out forms on our site. This is used solely to provide counseling services.</p>
 `;
 
 export const TERMS_CONTENT = `
 <h3>1. Acceptance of Terms</h3>
-<p>By accessing and using the iExplain Education website and services, you agree to be bound by these Terms and Conditions.</p>
+<p>By accessing and using the Privi Education website and services, you agree to be bound by these Terms and Conditions.</p>
 <p>All content provided is for informational purposes. We strive for accuracy but cannot guarantee admission as it depends on university criteria.</p>
 `;
 
@@ -135,7 +135,7 @@ allIndiaNames.forEach(name => {
 
 export const COLLEGE_DETAILS = DETAILED_COLLEGES;
 
-export const ABOUT_US_CONTENT = { intro: `Welcome to iExplain Education...`, vision: { title: "Opening Doors...", text: "..." }, mission: { title: "Empowering Minds...", points: [] } };
+export const ABOUT_US_CONTENT = { intro: `Welcome to Privi Education...`, vision: { title: "Opening Doors...", text: "..." }, mission: { title: "Empowering Minds...", points: [] } };
 export const CORE_VALUES_FULL = [{ title: "Integrity", desc: "..." }];
 export const TEAM_MEMBERS = [{ name: "Sunil Baranwal", role: "Director", image: "https://ui-avatars.com/api/?name=Sunil+Baranwal" }];
 
@@ -342,7 +342,7 @@ export const BLOG_POSTS: Blog[] = [
       <p>With a culture, food, and climate almost identical to India, Bangladesh offers a home away from home. The syllabus is also very similar to the NMC curriculum, leading to high FMGE passing rates.</p>
 
       <h3>Conclusion</h3>
-      <p>Each of these countries has unique advantages. Your choice should depend on your budget, career goals, and preference for climate and culture. Contact iExplain Education today for a personalized counseling session to help you decide.</p>
+      <p>Each of these countries has unique advantages. Your choice should depend on your budget, career goals, and preference for climate and culture. Contact Privi Education today for a personalized counseling session to help you decide.</p>
     `,
     readTime: "5 min"
   },
@@ -398,7 +398,7 @@ export const BLOG_POSTS: Blog[] = [
       <h3>Benefits of Studying in UK</h3>
       <p>The UK offers 1-year Master's programs, which saves you time and money. Additionally, the 2-year Post-Study Work (PSW) visa allows you to stay and work in the UK after graduation, providing excellent career exposure.</p>
 
-      <p>Don't let language tests be a barrier. Contact iExplain Education to assess your profile and apply to the best UK universities today.</p>
+      <p>Don't let language tests be a barrier. Contact Privi Education to assess your profile and apply to the best UK universities today.</p>
     `,
     readTime: "6 min"
   }
@@ -418,13 +418,13 @@ export const ROADMAP_STEPS = [
   { 
     step: "02",
     title: "Choose Your Destination & Course", 
-    desc: "Selecting the right destination and course is the foundation of a successful career. At iExplain Education, we help you explore the best countries and programs based on your academic background, career goals, and budget.",
+    desc: "Selecting the right destination and course is the foundation of a successful career. At Privi Education, we help you explore the best countries and programs based on your academic background, career goals, and budget.",
     icon: "fa-solid fa-earth-americas"
   },
   { 
     step: "03",
     title: "University Selection", 
-    desc: "Selecting the right university is one of the most important decisions in a student’s academic journey. At iExplain Education, we carefully analyze your academic background, career goals, preferred location, and budget to recommend the most suitable universities.",
+    desc: "Selecting the right university is one of the most important decisions in a student’s academic journey. At Privi Education, we carefully analyze your academic background, career goals, preferred location, and budget to recommend the most suitable universities.",
     icon: "fa-solid fa-building-columns"
   },
   { 
@@ -620,19 +620,19 @@ export const TESTIMONIALS = [
   {
     name: "Aditi Sharma",
     univ: "Kazan Federal University",
-    text: "iExplain Education helped me choose the right university for my MBBS. The counseling was very detailed and they guided me through the entire admission process.",
+    text: "Privi Education helped me choose the right university for my MBBS. The counseling was very detailed and they guided me through the entire admission process.",
     avatar: "https://ui-avatars.com/api/?name=Aditi+Sharma&background=random"
   },
   {
     name: "Rahul Verma",
     univ: "Northeastern University",
-    text: "The team at iExplain was incredibly supportive. They helped me with my visa application and even gave me pre-departure briefing which was very useful.",
+    text: "The team at Privi was incredibly supportive. They helped me with my visa application and even gave me pre-departure briefing which was very useful.",
     avatar: "https://ui-avatars.com/api/?name=Rahul+Verma&background=random"
   },
   {
     name: "Sneha Gupta",
     univ: "University of Leeds",
-    text: "I was confused about which country to choose for my masters. iExplain helped me compare different options and I'm very happy with my decision to study in UK.",
+    text: "I was confused about which country to choose for my masters. Privi helped me compare different options and I'm very happy with my decision to study in UK.",
     avatar: "https://ui-avatars.com/api/?name=Sneha+Gupta&background=random"
   }
 ];

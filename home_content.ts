@@ -2,10 +2,10 @@
 export const WHO_WE_ARE_CONTENT = {
   title: "Who We Are?",
   description: [
-    "At iExplain Education, we are a trusted education consultancy dedicated to guiding students toward the right academic opportunities in India and abroad. We specialize in MBBS Abroad, MBBS in India, Study Abroad programs, MBA, B.Tech, and various other professional courses across top universities worldwide.",
+    "At Privi Education, we are a trusted education consultancy dedicated to guiding students toward the right academic opportunities in India and abroad. We specialize in MBBS Abroad, MBBS in India, Study Abroad programs, MBA, B.Tech, and various other professional courses across top universities worldwide.",
     "Our mission is to make the admission journey simple, transparent, and stress-free for students and parents. From choosing the right country, university, and course to handling documentation, application processing, and visa guidance, we provide complete end-to-end support.",
     "We understand that every student has different dreams and career goals. That’s why our experienced counselors offer personalized guidance based on academic background, budget, and long-term aspirations.",
-    "At iExplain Education, we don’t just help with admissions — we help students build successful global careers."
+    "At Privi Education, we don’t just help with admissions — we help students build successful global careers."
   ],
   image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" // Placeholder image
 };
@@ -38,21 +38,21 @@ export const STUDENT_REVIEWS = [
     id: 1,
     name: "Ashish Naikwadi",
     review:
-      "I am incredibly grateful to iExplain Education for their exceptional support and guidance throughout my university admission process. My Master’s degree journey would not have been possible without the unwavering help of Sakshi Ma’am and Bhumika.",
+      "I am incredibly grateful to Privi Education for their exceptional support and guidance throughout my university admission process. My Master’s degree journey would not have been possible without the unwavering help of Sakshi Ma’am and Bhumika.",
     avatar: "https://socialfoundationindia.org/wp-content/uploads/2026/03/Ashish-Naikwadi.jpeg"
   },
   {
     id: 2,
     name: "Poorva Singh",
     review:
-      "I’m from Delhi, and I’m heading to NIMS University Jaipur this year with the help of iExplain Education. Honestly, they made the entire process seamless, from securing my admission. Their team guided me at every step, patiently addressing all my questions and concerns.",
+      "I’m from Delhi, and I’m heading to NIMS University Jaipur this year with the help of Privi Education. Honestly, they made the entire process seamless, from securing my admission. Their team guided me at every step, patiently addressing all my questions and concerns.",
     avatar: "https://socialfoundationindia.org/wp-content/uploads/2026/03/Poorva-Singh.jpeg"
   },
   {
     id: 3,
     name: "Afsana Shaikh",
     review:
-      "I am Afsana Shaikh from Maharashtra, and I am delighted to recommend Mr. Sunil Baranwal from iExplain Education for his outstanding assistance in helping me secure admission in ISM Bishkek, Kyrgyzstan for my MBBS studies. From the very beginning, Mr. Baranwal's expertise and dedication shone through, providing me with invaluable guidance throughout the admission process.",
+      "I am Afsana Shaikh from Maharashtra, and I am delighted to recommend Mr. Sunil Baranwal from Privi Education for his outstanding assistance in helping me secure admission in ISM Bishkek, Kyrgyzstan for my MBBS studies. From the very beginning, Mr. Baranwal's expertise and dedication shone through, providing me with invaluable guidance throughout the admission process.",
     avatar: "https://socialfoundationindia.org/wp-content/uploads/2026/03/Afsana-Shaikh.jpeg"
   },
   {
@@ -101,13 +101,13 @@ export const HOW_IT_WORKS_CONTENT = [
   {
     step: "02",
     title: "Choose Your Destination & Course",
-    desc: "Selecting the right destination and course is the foundation of a successful career. At iExplain Education, we help you explore the best countries and programs based on your academic background, career goals, and budget.",
+    desc: "Selecting the right destination and course is the foundation of a successful career. At Privi Education, we help you explore the best countries and programs based on your academic background, career goals, and budget.",
     icon: "fa-solid fa-map-location-dot"
   },
   {
     step: "03",
     title: "University Selection",
-    desc: "Selecting the right university is one of the most important decisions in a student’s academic journey. At iExplain Education, we carefully analyze your academic background, career goals, preferred location, and budget to recommend the most suitable universities.",
+    desc: "Selecting the right university is one of the most important decisions in a student’s academic journey. At Privi Education, we carefully analyze your academic background, career goals, preferred location, and budget to recommend the most suitable universities.",
     icon: "fa-solid fa-building-columns"
   },
   {

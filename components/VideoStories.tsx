@@ -96,7 +96,7 @@ const VideoStories: React.FC = () => {
         </h2>
         <div className="w-16 h-1 bg-brand-gold mb-6 rounded-full mx-auto"></div>
         <p className="text-lg text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto leading-relaxed">
-          Watch real experiences from students who transformed their careers with iExplain.
+          Watch real experiences from students who transformed their careers with Privi.
         </p>
       </div>
 
@@ -190,7 +190,7 @@ const VideoStories: React.FC = () => {
                   </div>
                </div>
                <p className="text-white/90 text-sm font-medium leading-relaxed bg-black/20 backdrop-blur-md p-4 rounded-xl border border-white/10 mb-6">
-                 "{selectedStory.tagline} - Experience the journey with iExplain Education."
+                 "{selectedStory.tagline} - Experience the journey with Privi Education."
                </p>
                
                <div className="flex gap-3">

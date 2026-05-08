@@ -1,17 +1,17 @@
 import { Destination, Office, Blog, Testimonial, College, CollegeDetailData, ProgramDetailData, MBBSDetailData, StudyIndiaDetailData, Service } from './types';
 
-export const LOGO_URL = "https://www.iexplaineducation.com/wp-content/uploads/2023/04/Logo-2-scaled-e1684926432756-768x307.jpg";
+export const LOGO_URL = "https://res.cloudinary.com/dusvykklu/image/upload/v1778240300/Privi_xlatzs.jpg";
 export const HERO_IMG_URL = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1200";
 
 export const PRIVACY_POLICY_CONTENT = `
 <h3>1. Introduction</h3>
-<p>Welcome to iExplain Education. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal information when you visit our website or use our services.</p>
+<p>Welcome to Privi Education. We value your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal information when you visit our website or use our services.</p>
 <p>We collect basic information such as name, email, and phone number when you fill out forms on our site. This is used solely to provide counseling services.</p>
 `;
 
 export const TERMS_CONTENT = `
 <h3>1. Acceptance of Terms</h3>
-<p>By accessing and using the iExplain Education website and services, you agree to be bound by these Terms and Conditions.</p>
+<p>By accessing and using the Privi Education website and services, you agree to be bound by these Terms and Conditions.</p>
 <p>All content provided is for informational purposes. We strive for accuracy but cannot guarantee admission as it depends on university criteria.</p>
 `;
 

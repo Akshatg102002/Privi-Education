@@ -26,17 +26,12 @@ const Hero: React.FC<HeroProps> = ({ onBookSession }) => {
           
           <div className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 animate-fade-in-up">
             <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></div>
-            <span className="text-brand-gold font-black text-[10px] uppercase tracking-[0.3em]">Opening Doors To Success</span>
+            <span className="text-brand-gold font-bold text-[11px] uppercase tracking-[0.12em]">Opening Doors To Success</span>
           </div>
           
-          <h1 className="text-4xl lg:text-6xl font-black text-white leading-[1.1] mb-8 tracking-tight animate-fade-in-up delay-100">
+          <h1 className="text-4xl lg:text-7xl font-playfair font-bold text-white leading-[1.1] mb-8 animate-fade-in-up delay-100 italic">
             Unlock global opportunities with <br />
-            <span
-              className="text-brand-gold inline-block pt-2"
-              style={{ WebkitTextStroke: "0.5px rgba(255,255,255,0.7)" }}
-            >
-              iExplain Education.
-            </span>
+            <span className="not-italic text-brand-gold">Privi Education.</span>
           </h1>
           
           <p className="text-lg lg:text-xl text-gray-200 font-medium mb-10 max-w-2xl leading-relaxed animate-fade-in-up delay-200">
@@ -46,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onBookSession }) => {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up delay-300">
             <button 
               onClick={onBookSession}
-              className="px-8 py-4 bg-brand-gold text-white rounded-xl font-black text-xs uppercase tracking-widest hover:bg-brand-blue transition-all shadow-lg shadow-brand-gold/20 flex items-center justify-center gap-3 group"
+              className="px-8 py-4 bg-brand-gold text-white rounded-xl font-bold text-[11px] uppercase tracking-widest hover:bg-brand-blue transition-all shadow-lg flex items-center justify-center gap-3 group"
             >
               <i className="fa-solid fa-star group-hover:rotate-12 transition-transform"></i>
               Free Counseling Session

@@ -93,7 +93,7 @@ const ProgramDetailPage: React.FC<ProgramDetailPageProps> = ({ data, type }) => 
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-white"><i className="fa-solid fa-envelope"></i></div>
-                      <div><p className="text-[10px] font-bold uppercase tracking-widest text-white/60">Email Us</p><p className="font-bold">info@iexplaineducation.in</p></div>
+                      <div><p className="text-[10px] font-bold uppercase tracking-widest text-white/60">Email Us</p><p className="font-bold">info@privieducation.in</p></div>
                     </div>
                 </div>
               </div>

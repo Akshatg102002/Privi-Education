@@ -28,11 +28,11 @@ const StudyAbroadDetailPage: React.FC<StudyAbroadDetailPageProps> = ({ data }) =
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10 flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-gold text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block px-4 py-1.5 bg-brand-gold/20 text-brand-gold text-[11px] font-bold uppercase tracking-[0.12em] mb-6">
               Study Abroad
             </span>
-            <h1 className="text-5xl lg:text-7xl font-black mb-6 leading-tight tracking-tight">
-              Study in <span className="text-brand-gold">{destinationName}</span>
+            <h1 className="text-5xl lg:text-7xl font-playfair font-bold mb-6 leading-tight tracking-tight">
+              Study in <span className="text-brand-gold italic">{destinationName}</span>
             </h1>
             <p className="text-lg lg:text-xl text-white/80 font-medium leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
               {data.intro.text}
@@ -118,9 +118,9 @@ const StudyAbroadDetailPage: React.FC<StudyAbroadDetailPageProps> = ({ data }) =
         {/* 4. Top Universities */}
         <section>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black text-brand-blue dark:text-white mb-4">Top Universities in {destinationName} for International Students</h2>
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-brand-blue dark:text-white mb-4 tracking-tight">Top Universities in {destinationName}</h2>
           </div>
-          <div className="overflow-x-auto bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm border border-gray-100 dark:border-slate-700">
+          <div className="overflow-x-auto bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-brand-blue/10 dark:border-slate-700">
             <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
                 <tr>
@@ -231,7 +231,7 @@ const StudyAbroadDetailPage: React.FC<StudyAbroadDetailPageProps> = ({ data }) =
         {/* 8. Why Choose Us */}
         <section>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black text-brand-blue dark:text-white mb-4">Why Choose iExplain Education to Study in {destinationName}</h2>
+            <h2 className="text-3xl lg:text-4xl font-black text-brand-blue dark:text-white mb-4">Why Choose Privi Education to Study in {destinationName}</h2>
             <p className="text-gray-600 dark:text-gray-400 font-medium max-w-2xl mx-auto">We provide end-to-end support to ensure your study abroad journey is smooth and successful.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">

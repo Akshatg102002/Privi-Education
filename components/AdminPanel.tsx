@@ -208,8 +208,8 @@ const AdminPanel: React.FC<{ onExit: () => void }> = ({ onExit }) => {
       <div className="min-h-screen bg-brand-blue flex items-center justify-center p-6">
         <div className="bg-white p-10 rounded-[2.5rem] shadow-2xl max-w-md w-full animate-fade-in text-center">
           <div className="mb-8 flex flex-col items-center">
-            <img src={LOGO_URL} alt="iExplain" className="h-16 w-auto mb-4" />
-            <h2 className="text-2xl font-black text-brand-blue mb-1">iExplain Education Admin</h2>
+            <img src={LOGO_URL} alt="Privi" className="h-16 w-auto mb-4" />
+            <h2 className="text-2xl font-black text-brand-blue mb-1">Privi Education Admin</h2>
             <p className="text-black font-bold text-xs uppercase tracking-widest">Secure Access</p>
           </div>
           <form onSubmit={handleLogin} className="space-y-5 text-left">
@@ -237,10 +237,10 @@ const AdminPanel: React.FC<{ onExit: () => void }> = ({ onExit }) => {
     <div className="min-h-screen bg-[#f8fafc] flex font-sans">
       <aside className="w-64 bg-brand-blue shrink-0 flex flex-col text-white shadow-2xl z-50 h-screen sticky top-0">
         <div className="p-8 flex flex-col items-start space-y-4">
-          <img src={LOGO_URL} alt="iExplain" className="h-8 w-auto bg-white p-1 rounded" />
+          <img src={LOGO_URL} alt="Privi" className="h-8 w-auto bg-white p-1 rounded" />
           <div>
             <h1 className="font-black text-lg tracking-tight leading-none">Admin Panel</h1>
-            <p className="text-[10px] text-white/50 uppercase tracking-widest">iExplain Education</p>
+            <p className="text-[10px] text-white/50 uppercase tracking-widest">Privi Education</p>
           </div>
         </div>
         <nav className="flex-grow py-4 overflow-y-auto no-scrollbar space-y-1">
@@ -521,6 +521,73 @@ const AdminPanel: React.FC<{ onExit: () => void }> = ({ onExit }) => {
                      </form>
                   </div>
                )}
+            </div>
+          )}
+
+          {activeTab === 'stories' && (
+            <div className="animate-fade-in">
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-3xl font-black text-brand-blue">Manage <span className="text-brand-gold">Stories</span></h2>
+                <button onClick={() => { if(viewMode === 'list') { resetForms(); setViewMode('create'); } else { setViewMode('list'); } }} className="px-6 py-3 bg-brand-blue text-white rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-brand-gold transition-all shadow-lg">
+                  {viewMode === 'list' ? 'New Story' : 'Back to List'}
+                </button>
+              </div>
+
+              {viewMode === 'list' ? (
+                <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                  <table className="w-full text-left">
+                    <thead className="bg-gray-50 border-b border-gray-100">
+                      <tr>
+                        <th className="px-8 py-5 text-[10px] font-black uppercase text-black">Student Name</th>
+                        <th className="px-8 py-5 text-[10px] font-black uppercase text-black">University</th>
+                        <th className="px-8 py-5 text-[10px] font-black uppercase text-black text-right">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-50">
+                      {stories.map(s => (
+                        <tr key={s.id} className="hover:bg-gray-50/50">
+                          <td className="px-8 py-5 text-sm font-bold text-brand-blue">{s.studentName}</td>
+                          <td className="px-8 py-5 text-sm font-medium text-gray-500">{s.university}</td>
+                          <td className="px-8 py-5 text-right space-x-2">
+                            <button onClick={() => { setStoryForm(s); setEditingId(s.id); setViewMode('edit');setImagePreview(s.thumbnailUrl); }} className="p-2 text-blue-500 hover:bg-blue-50 rounded-lg"><i className="fa-solid fa-pen"></i></button>
+                            <button onClick={() => deleteItem('video_testimonials', s.id)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><i className="fa-solid fa-trash"></i></button>
+                          </td>
+                        </tr>
+                      ))}
+                      {stories.length === 0 && (
+                        <tr><td colSpan={3} className="px-8 py-8 text-center text-gray-400 text-sm">No stories found. Create one.</td></tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="bg-white rounded-[2.5rem] p-12 max-w-xl shadow-sm border border-gray-100">
+                  <form onSubmit={(e) => { e.preventDefault(); handleSave('video_testimonials', storyForm); }} className="space-y-6">
+                    <div>
+                        <label className="text-[10px] font-black uppercase text-black mb-2 block">Student Name</label>
+                        <input required type="text" className="w-full px-5 py-3 rounded-xl bg-gray-50 border outline-none font-bold text-brand-blue" value={storyForm.studentName} onChange={e => setStoryForm({...storyForm, studentName: e.target.value})} />
+                    </div>
+                    <div>
+                        <label className="text-[10px] font-black uppercase text-black mb-2 block">University</label>
+                        <input required type="text" className="w-full px-5 py-3 rounded-xl bg-gray-50 border outline-none font-bold text-brand-blue" value={storyForm.university} onChange={e => setStoryForm({...storyForm, university: e.target.value})} />
+                    </div>
+                    <div>
+                        <label className="text-[10px] font-black uppercase text-black mb-2 block">Tagline</label>
+                        <input required type="text" className="w-full px-5 py-3 rounded-xl bg-gray-50 border outline-none text-gray-500" value={storyForm.tagline} onChange={e => setStoryForm({...storyForm, tagline: e.target.value})} />
+                    </div>
+                    <div>
+                        <label className="text-[10px] font-black uppercase text-black mb-2 block">Video URL</label>
+                        <input required type="text" className="w-full px-5 py-3 rounded-xl bg-gray-50 border outline-none text-gray-500" value={storyForm.videoUrl} onChange={e => setStoryForm({...storyForm, videoUrl: e.target.value})} />
+                    </div>
+                    <div>
+                        <label className="text-[10px] font-black uppercase text-black mb-2 block">Thumbnail URL</label>
+                        <input required type="text" className="w-full px-5 py-3 rounded-xl bg-gray-50 border outline-none text-gray-500" value={storyForm.thumbnailUrl} onChange={e => setStoryForm({...storyForm, thumbnailUrl: e.target.value})} />
+                        {storyForm.thumbnailUrl && <img src={storyForm.thumbnailUrl} className="mt-4 h-20 w-32 object-cover rounded-lg" />}
+                    </div>
+                    <button type="submit" className="w-full py-4 bg-brand-gold text-white rounded-xl font-black uppercase tracking-widest shadow-xl shadow-brand-gold/30">Save Story</button>
+                  </form>
+                </div>
+              )}
             </div>
           )}
 

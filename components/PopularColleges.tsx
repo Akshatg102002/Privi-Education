@@ -96,8 +96,9 @@ const PopularColleges: React.FC = () => {
 
         {/* Heading + Tabs — always visible */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-5xl font-black text-brand-blue dark:text-white mb-6 tracking-tight">
-            Our <span className="text-brand-gold">Partners</span>
+          <span className="text-brand-gold font-bold uppercase tracking-[0.12em] text-[11px] block mb-2">Universities</span>
+          <h2 className="text-3xl lg:text-5xl font-playfair font-bold text-brand-blue dark:text-white mb-6 tracking-tight">
+            Our <span className="text-brand-gold italic">Partners</span>
           </h2>
           <div className="w-16 h-1 bg-brand-gold mb-8 mx-auto rounded-full"></div>
 
@@ -106,7 +107,7 @@ const PopularColleges: React.FC = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`text-lg font-bold pb-4 relative transition-colors ${
+                className={`text-lg font-playfair font-bold pb-4 relative transition-colors ${
                   activeTab === tab
                     ? 'text-brand-gold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-gold'
                     : 'text-gray-400 hover:text-brand-blue dark:hover:text-white'
@@ -165,7 +166,7 @@ const PopularColleges: React.FC = () => {
                 {filteredColleges.map((college, i) => (
                   <div
                     key={college.id ?? i}
-                    className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-gray-100 dark:border-slate-700 flex flex-col mx-auto w-full max-w-[300px]"
+                    className="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-brand-gold hover:-translate-y-1 transition-all duration-300 border border-brand-blue/10 dark:border-slate-700 flex flex-col mx-auto w-full max-w-[300px]"
                   >
                     <div className="aspect-[4/3] overflow-hidden">
                       <img

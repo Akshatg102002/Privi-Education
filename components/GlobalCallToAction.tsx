@@ -17,8 +17,8 @@ const GlobalCallToAction: React.FC<GlobalCallToActionProps> = ({ onOpen }) => {
           
           {/* Text Content */}
           <div className="relative z-10 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-3 tracking-tight">
-              Book Your <span className="text-[#BB962C]">FREE Consultation</span> with Our Experts
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-white mb-3 tracking-tight italic">
+              Book Your <span className="text-brand-gold">FREE Consultation</span> with Our Experts
             </h2>
             <p className="text-blue-100 font-medium text-sm md:text-base max-w-2xl opacity-90">
               Get personalized guidance, visa support, and university selection help from industry leaders.
@@ -29,7 +29,7 @@ const GlobalCallToAction: React.FC<GlobalCallToActionProps> = ({ onOpen }) => {
           <div className="relative z-10 shrink-0">
             <button 
               onClick={onOpen}
-              className="px-8 py-4 bg-[#BB962C] text-[#000] rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-[0_0_5px_rgba(74,222,128,0.4)] flex items-center gap-3"
+              className="px-8 py-4 bg-brand-gold text-brand-blue rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-[0_0_15px_rgba(201,162,39,0.4)] flex items-center gap-3"
             >
               Talk to Us
               <i className="fa-solid fa-arrow-right"></i>

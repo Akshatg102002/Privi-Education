@@ -52,7 +52,7 @@ const LoadingOverlay = () => (
   <div className="fixed inset-0 z-[1000] bg-white dark:bg-slate-900 flex items-center justify-center animate-fade-in transition-all">
     <div className="flex flex-col items-center">
       <div className="w-16 h-16 border-4 border-brand-gold/20 border-t-brand-gold rounded-full animate-spin mb-4"></div>
-      <p className="text-brand-gold font-bold uppercase tracking-widest text-[10px]">Loading iExplain...</p>
+      <p className="text-brand-gold font-bold uppercase tracking-widest text-[10px]">Loading Privi...</p>
     </div>
   </div>
 );
@@ -94,7 +94,7 @@ const ContactMapSection = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                        <p className="text-[10px] font-black uppercase tracking-widest text-white/50 mb-1">Email Us</p>
-                       <p className="text-xl font-bold break-all sm:break-normal">{email || 'info@iexplaineducation.in'}</p>
+                       <p className="text-xl font-bold break-all sm:break-normal">{email || 'info@privieducation.in'}</p>
                     </div>
                  </div>
 

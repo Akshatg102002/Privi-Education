@@ -19,26 +19,26 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
   const studyCountries = FOOTER_COLLEGES.study.map(c => c.country);
 
   return (
-    <footer className="font-sans border-t border-gray-100 dark:border-slate-800 transition-colors">
+    <footer className="font-sans border-t-4 border-brand-gold bg-brand-blue transition-colors text-white">
       
-      {/* PART 1: Links & Colleges (White Background) */}
-      <div className="bg-white dark:bg-slate-900 pt-16 pb-12">
+      {/* PART 1: Links & Colleges (Navy Background) */}
+      <div className="pt-16 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Top Row: Brand, Top Countries, Quick Links */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 border-b border-gray-100 dark:border-slate-800 pb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 border-b border-brand-gold/30 pb-12">
             
             {/* Column 1: Brand Info */}
             <div className="space-y-6">
-                <img src={logoUrl || LOGO_URL} alt="iExplain" className="h-10 w-auto dark:brightness-125" />
-                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium leading-relaxed max-w-xs">
-                iExplain Education is a trusted source for authentic educational guidance. From admission-related help to e-learning resources, it ensures that students receive all the help they need.
+                <img src={logoUrl || LOGO_URL} alt="Privi Education" className="h-10 w-auto brightness-0 invert" />
+                <p className="text-xs text-white/70 font-medium leading-relaxed max-w-xs">
+                Privi Education is a trusted source for authentic educational guidance. From admission-related help to e-learning resources, it ensures that students receive all the help they need.
                 </p>
                 <div className="space-y-3 pt-2">
-                <div className="flex items-center text-xs font-bold text-brand-blue dark:text-white group cursor-pointer">
+                <div className="flex items-center text-xs font-bold text-white group cursor-pointer">
                     <i className="fa-solid fa-envelope text-brand-gold w-6"></i>
-                    <span className="group-hover:text-brand-gold transition-colors">{email || 'info@iexplaineducation.in'}</span>
+                    <span className="group-hover:text-brand-gold transition-colors">{email || 'info@privieducation.in'}</span>
                 </div>
-                <div className="flex items-center text-xs font-bold text-brand-blue dark:text-white group cursor-pointer">
+                <div className="flex items-center text-xs font-bold text-white group cursor-pointer">
                     <i className="fa-solid fa-phone text-brand-gold w-6"></i>
                     <span className="group-hover:text-brand-gold transition-colors">{helpline || '+91-9311431007'}</span>
                 </div>
@@ -47,11 +47,11 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
 
             {/* Column 2: Top MBBS Countries */}
             <div>
-                <h4 className="font-black text-sm text-brand-blue dark:text-white mb-6 border-b-2 border-brand-gold inline-block pb-1">Top MBBS Abroad Countries</h4>
+                <h4 className="font-playfair text-lg text-white mb-6 border-b border-brand-gold/50 inline-block pb-1">Top MBBS Abroad Countries</h4>
                 <ul className="space-y-3">
                 {mbbsCountries.map((country) => (
                     <li key={country}>
-                    <Link to={`/mbbs-abroad/${createSlug(country)}`} className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-brand-blue dark:hover:text-white hover:pl-1 transition-all block">
+                    <Link to={`/mbbs-abroad/${createSlug(country)}`} className="text-sm font-medium text-white/60 hover:text-brand-gold hover:pl-1 transition-all block">
                         {country}
                     </Link>
                     </li>
@@ -61,11 +61,11 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
 
             {/* Column 3: Top Study Abroad Countries */}
             <div>
-                <h4 className="font-black text-sm text-brand-blue dark:text-white mb-6 border-b-2 border-brand-gold inline-block pb-1">Top Study Abroad Countries</h4>
+                <h4 className="font-playfair text-lg text-white mb-6 border-b border-brand-gold/50 inline-block pb-1">Top Study Abroad Countries</h4>
                 <ul className="space-y-3">
                 {studyCountries.map((country) => (
                     <li key={country}>
-                    <Link to={`/study-abroad/${createSlug(country)}`} className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-brand-blue dark:hover:text-white hover:pl-1 transition-all block">
+                    <Link to={`/study-abroad/${createSlug(country)}`} className="text-sm font-medium text-white/60 hover:text-brand-gold hover:pl-1 transition-all block">
                         {country}
                     </Link>
                     </li>
@@ -74,14 +74,14 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
             </div>
 
             {/* Column 4: Map */}
-            <div className="bg-gray-50 dark:bg-slate-800 p-2 rounded-[2rem] border border-gray-100 dark:border-slate-700 h-64 overflow-hidden relative">
+            <div className="bg-white/5 p-2 rounded-[2rem] border border-brand-gold/30 h-64 overflow-hidden relative">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184275!2d77.2065322!3d28.6289017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1689613765239!5m2!1sen!2sin" 
-                  className="w-full h-full rounded-[1.5rem] grayscale hover:grayscale-0 transition-all duration-700" 
+                  className="w-full h-full rounded-[1.5rem] grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100" 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg text-[10px] font-bold text-brand-blue shadow-sm pointer-events-none">
+                <div className="absolute bottom-4 left-4 bg-brand-blue/90 backdrop-blur-sm px-3 py-1 rounded-lg text-[10px] font-bold text-white shadow-sm pointer-events-none border border-brand-gold/30">
                    Head Office
                 </div>
             </div>
@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
 
             {/* MBBS Colleges Grid */}
             <div className="mb-16">
-            <h3 className="text-2xl font-black text-brand-blue dark:text-white mb-10">Top MBBS Abroad Colleges</h3>
+            <h3 className="text-2xl font-playfair text-white mb-8 border-b border-brand-gold/30 pb-4">Top MBBS Abroad Colleges</h3>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-12">
                 {FOOTER_COLLEGES.mbbs.map((section, idx) => (
                     <div key={idx}>
@@ -97,7 +97,7 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
                     <ul className="space-y-2.5">
                         {section.names.map((name, i) => (
                         <li key={i}>
-                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-gray-500 dark:text-gray-400 hover:text-brand-blue dark:hover:text-white transition-colors leading-tight block">
+                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-white/60 hover:text-brand-gold transition-colors leading-tight block">
                             {name}
                             </Link>
                         </li>
@@ -110,7 +110,7 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
 
             {/* Study Abroad Colleges Grid */}
             <div>
-            <h3 className="text-2xl font-black text-brand-blue dark:text-white mb-10">Top Study Abroad Colleges</h3>
+            <h3 className="text-2xl font-playfair text-white mb-8 border-b border-brand-gold/30 pb-4">Top Study Abroad Colleges</h3>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-12">
                 {FOOTER_COLLEGES.study.map((section, idx) => (
                     <div key={idx}>
@@ -118,7 +118,7 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
                     <ul className="space-y-2.5">
                         {section.names.map((name, i) => (
                         <li key={i}>
-                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-gray-500 dark:text-gray-400 hover:text-brand-blue dark:hover:text-white transition-colors leading-tight block">
+                            <Link to={`/college/${createSlug(name)}`} className="text-[11px] font-bold text-white/60 hover:text-brand-gold transition-colors leading-tight block">
                             {name}
                             </Link>
                         </li>
@@ -132,12 +132,12 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
       </div>
 
       {/* PART 2: Global Presence (Dark Blue Background) */}
-      <section className="bg-brand-blue text-white py-20 relative overflow-hidden">
+      <section className="bg-brand-blue/80 text-white py-20 relative overflow-hidden border-t-2 border-brand-gold/20">
           {/* Background Map/Icon decor */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-             <div className="flex justify-between items-center mb-16 border-b border-white/10 pb-6">
-                <h2 className="text-3xl font-black tracking-tight">Our Global Presence</h2>
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-gold"><i className="fa-solid fa-location-dot"></i></div>
+             <div className="flex justify-between items-center mb-16 border-b border-brand-gold/30 pb-6">
+                <h2 className="text-3xl font-playfair tracking-tight">Our Global Presence</h2>
+                <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold"><i className="fa-solid fa-location-dot"></i></div>
              </div>
 
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
@@ -149,25 +149,25 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, helpline, email }) => {
                         <p className="text-sm font-medium text-white/80 leading-relaxed min-h-[40px]">{off.address}</p>
                      </div>
                      <div className="flex space-x-3">
-                        <Link to={`/office/${off.slug}`} className="px-4 py-2 bg-white/10 border border-white/20 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Details</Link>
-                        <a href={`tel:${off.phone}`} className="px-4 py-2 bg-white/10 border border-white/20 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Call</a>
+                        <Link to={`/office/${off.slug}`} className="px-4 py-2 bg-white/5 border border-brand-gold/30 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Details</Link>
+                        <a href={`tel:${off.phone}`} className="px-4 py-2 bg-white/5 border border-brand-gold/30 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">Call</a>
                      </div>
                   </div>
                 ))}
 
                 {/* Central Helpline Card */}
-                <div className="lg:col-span-1 bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col justify-center">
+                <div className="lg:col-span-1 bg-brand-gold/5 backdrop-blur-sm p-8 rounded-3xl border border-brand-gold/20 flex flex-col justify-center">
                    <h4 className="text-brand-gold font-black text-[10px] uppercase tracking-[0.2em] mb-2">Central Helpline</h4>
                    <p className="text-3xl font-black text-white mb-2">{helpline || '+91-9311338511'}</p>
-                   <p className="text-sm text-white/60">{email || 'info@iexplaineducation.in'}</p>
+                   <p className="text-sm text-white/60">{email || 'info@privieducation.in'}</p>
                 </div>
              </div>
           </div>
        </section>
 
       {/* Copyright */}
-       <div className="bg-[#011e33] py-8 text-center border-t border-white/5">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">© 2025 iExplain Education. Shaping Global Futures.</p>
+       <div className="bg-black/20 py-8 text-center border-t border-brand-gold/20">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">© 2025 Privi Education. Shaping Global Futures.</p>
        </div>
     </footer>
   );

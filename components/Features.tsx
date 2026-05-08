@@ -40,12 +40,12 @@ const Features: React.FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {FEATURE_LIST.map((feature, idx) => (
-        <div key={idx} className="group p-10 bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 rounded-3xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 shadow-sm">
-          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 bg-brand-gold/10 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-500 transform group-hover:rotate-6`}>
+        <div key={idx} className="group p-10 bg-white dark:bg-slate-800 border border-brand-blue/10 dark:border-slate-700 rounded-xl hover:shadow-lg hover:border-brand-gold hover:-translate-y-2 transition-all duration-300">
+          <div className="w-16 h-16 rounded-full flex items-center justify-center mb-8 bg-brand-gold/10 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-500 transform group-hover:scale-110">
             {feature.icon}
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{feature.title}</h3>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+          <h3 className="text-xl font-playfair font-bold text-brand-blue dark:text-white mb-4">{feature.title}</h3>
+          <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm">
             {feature.description}
           </p>
         </div>
