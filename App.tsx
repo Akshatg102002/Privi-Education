@@ -94,7 +94,7 @@ const ContactMapSection = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                        <p className="text-[10px] font-black uppercase tracking-widest text-white/50 mb-1">Email Us</p>
-                       <p className="text-xl font-bold break-all sm:break-normal">{email || 'info@privieducation.in'}</p>
+                       <p className="text-xl font-bold break-all sm:break-normal">{'info@privieducation.in'}</p>
                     </div>
                  </div>
 
